@@ -1,0 +1,82 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.sky, .fieldOne, .runwayOne, .fieldTwo, .runwayTwo, .fieldThree {
+  position: relative;
+}
+
+.sky {
+  height: 30%;
+  background: skyblue;
+}
+
+.cloud {
+  position: absolute;
+}
+
+.fieldOne {
+  height: 5%;
+  background: seagreen;
+}
+
+.runwayOne {
+  height: 25%;
+  background: dimgray;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.linesOne {
+  box-sizing: border-box;
+  border: 4px dashed #ffffff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 46%
+}
+
+.fieldTwo {
+  height: 5%;
+  background: seagreen;
+}
+
+.runwayTwo {
+  height: 25%;
+  background: dimgray;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lineTwo {
+  box-sizing: border-box;
+  border: 4px dashed #ffffff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 76%;
+}
+
+.fieldThree {
+  height: 10%;
+  background: seagreen;
+}
+
+.jane {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+.benji {
+  position: absolute;
+  left: 10px;
+  top: 460px;
+}
