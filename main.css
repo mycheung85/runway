@@ -18,6 +18,28 @@ html, body {
   position: absolute;
 }
 
+.cloud:nth-child(1) {
+  width: 200px;
+  left: 60px;
+  opacity: 0.5;
+  animation: cloudAcross 15s linear infinite;
+}
+
+.cloud:nth-child(2) {
+  width: 100px;
+  left: 30px;
+  animation-iteration-count: infinite;
+  animation-duration: 40s;
+  
+}
+
+.cloud:nth-child(3) {
+  width: 100px;
+  animation: cloud3Move 15s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+
 .fieldOne {
   height: 5%;
   background: seagreen;
@@ -73,10 +95,60 @@ html, body {
   position: absolute;
   right: 20px;
   top: 40px;
+  animation: landing 8s infinite cubic-bezier(.34, .64, .88, .68), down 8s infinite linear;
+
 }
 
 .benji {
   position: absolute;
   left: 10px;
   top: 460px;
+  animation: takeOff 8s infinite cubic-bezier(.86, 0.23, 0.46, 0.86), up  8s infinite linear;
+
+}
+
+@keyframes takeOff {
+  from {left:0}
+  to {left:100%};
+}
+
+@keyframes up {
+  0% {top: 460px}
+  40% {top: 460px}
+  75% {top: 350px}
+  100% {top: 100px}
+
+}
+
+
+@keyframes landing {
+  from {right: 0}
+  to {right: 100%}
+}
+
+@keyframes down {
+  0% {top: 10px}
+  20% {top: 40px}
+  30% {top: 120px}
+  35% {top: 150px}
+  50% {top: 70px}
+  55% {top: 200px}
+  800% {top: 250px}
+  100% {top: 280px}
+}
+
+@keyframes cloudAcross {
+  0% {margin-left: 0px; top: 20px;}
+  30% {margin-left: 300px; top: 60px;}
+  50% {margin-left: 600px; top: 40px;}
+  80% {margin-left: 800px; top: 30px;}
+  90% {margin-left: 1000px; top: 40px;}
+  100% {margin-left: 1200px; top: 20px;}
+}
+
+@keyframes cloud3Move {
+  0% {opacity: 0; transform: translate(0px, 50px); }
+  30% {opacity: 0.5; transform: translate(300px, 100px);}
+  70% {opacity: 1; transform: translate(800px, 50px);}
+  100% {opacity: 0.5; transform: translate(1500px, 100px);}
 }
